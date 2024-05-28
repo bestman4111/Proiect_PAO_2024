@@ -1,5 +1,9 @@
 package Domain;
 
+import Service.CSVFile;
+
+import java.time.LocalTime;
+
 public class Author extends Person{
     private static int authorId = 0;
     private int authorCode; // a code assigned to each author by an association
@@ -10,6 +14,7 @@ public class Author extends Person{
         this.authorCode = authorCode;
         this.authorNoOfWrittenBooks = authorNoOfWrittenBooks;
         authorId++;
+        CSVFile.addDataToArray(new String[]{"Created author " + this.getPersonName(), LocalTime.now().toString()});
     }
 
     public int getAuthorCode() {

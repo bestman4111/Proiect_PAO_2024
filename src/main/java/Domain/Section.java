@@ -1,5 +1,9 @@
 package Domain;
 
+import Service.CSVFile;
+
+import java.time.LocalTime;
+
 public class Section {
     private static int sectionId = 0;
     private String sectionName;
@@ -9,6 +13,7 @@ public class Section {
         this.sectionName = sectionName;
         this.type = type;
         sectionId++;
+        CSVFile.addDataToArray(new String[]{"Created section " + this.sectionName, LocalTime.now().toString()});
     }
 
     public static int getSectionId() {

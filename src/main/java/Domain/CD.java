@@ -1,5 +1,9 @@
 package Domain;
 
+import Service.CSVFile;
+
+import java.time.LocalTime;
+
 public class CD extends Article{
     private static int CDId = 0;
     private int CDNoOfTracks;
@@ -14,6 +18,7 @@ public class CD extends Article{
         this.CDPublicationYear = CDPublicationYear;
         this.CDPublisher = CDPublisher;
         CDId++;
+        CSVFile.addDataToArray(new String[]{"Created CD " + this.articleName, LocalTime.now().toString()});
     }
 
     public int getCDNoOfTracks() {
@@ -50,6 +55,6 @@ public class CD extends Article{
 
     @Override
     public String toString() {
-        return "CD number " + CDId + ", titled \"" + articleName + "\" contains " + CDNoOfTracks + " tracks, is of the " + CDGenre + " genre and it was first published in the year " + CDPublicationYear + " by " + CDPublisher + " (Article number " + articleId + ")";
+        return "CD number " + CDId + ", titled \"" + articleName + "\" contains " + CDNoOfTracks + " tracks, is of the " + CDGenre.label + " genre and it was first published in the year " + CDPublicationYear + " by " + CDPublisher + " (Article number " + articleId + ")";
     }
 }

@@ -1,5 +1,9 @@
 package Domain;
 
+import Service.CSVFile;
+
+import java.time.LocalTime;
+
 public class Book extends Article{
     private static int bookId = 0;
     private int bookNoOfPages;
@@ -12,6 +16,7 @@ public class Book extends Article{
         this.bookPublicationYear = bookPublicationYear;
         this.bookPublisher = bookPublisher;
         bookId++;
+        CSVFile.addDataToArray(new String[]{"Created book " + this.articleName, LocalTime.now().toString()});
     }
 
     public int getBookNoOfPages() {
