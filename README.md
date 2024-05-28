@@ -36,3 +36,13 @@ Clasa PersonService este clasa de serviciu responsabila cu adaugare mai multor p
 
 ## Main
 Clasa Main se ocupa cu apelurile functiilor de adaugat sectiuni, articole, respectiv persoane. Aici sunt declarate toate obiectele si, unde este cazul, este apelata functia toString() pe obiect. La finalul functiei main din clasa Main am apelat inca o data functia addPerson() din clasa PersonService pentru a afisa eroarea care se returneaza cand se incearca adaugarea mai multor persoane decat maximul declarat precedent.
+
+## Actiuni posibile
+In cadrul proiectului meu se pot efectua urmatoarele actiuni:
+* creare de obiect de tip ArticleService care se ocupa de articolele create
+* creare de obiect de tip PersonService care se ocupa de persoanele create
+* initializare obiectelor de tip Library, Section, Book, CD, Author, Reader, ale caror functionalitati sunt de la sine intelese
+* adaugarea unei sectiuni la o librarie
+* adaugarea unui articol, de tip Book sau CD, la un obiect de tip ArticleService
+* adaugarea unei persoane, de tip Author sau Reader, la un obiect de tip PersonService
+* afisarea listei cu persoanele memorate in array-ul din obiectul de tip PersonService
